@@ -1,0 +1,34 @@
+.card {
+  display: inline-block;
+  width: 250px;
+  background-color: yellow;
+  color: black;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.card.low-priority {
+  background-color: green;
+  color: white;
+}
+
+.card.medium-priority {
+  background-color: yellow;
+  color: black;
+}
+
+.card.high-priority {
+  background-color: red;
+  color: white;
+}
+
+.card:first-child {
+  margin-left: 0;
+}
+
+.card:hover {
+  transform: scale(1.2);
+  box-shadow: 1px 1px 1px 1px black;
+}

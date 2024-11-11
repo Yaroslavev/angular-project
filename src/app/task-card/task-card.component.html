@@ -1,0 +1,10 @@
+@if (task) {
+  <div class = "card" [class.low-priority] = "task.priority == 0" [class.medium-priority] = "task.priority == 1" [class.high-priority] = "task.priority == 2" (click) = "ChangePriority()">
+    <h2>{{task.title}}</h2>
+    <p>{{task.description}}</p>
+    <p>{{task.deadline | date:"mediumDate"}}</p>
+    <div>
+      <button (click) = "Remove()">V</button>
+    </div>
+  </div>
+}

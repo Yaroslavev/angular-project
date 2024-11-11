@@ -1,0 +1,27 @@
+<form [formGroup] = "taskForm" (ngSubmit) = "onSubmit()">
+  <label>
+    <span>Title:</span>
+    <input type="text" formControlName="title">
+  </label>
+  <label>
+    <span>Priority:</span>
+    <select formControlName="priority">
+      <option value="0">Low</option>
+      <option value="1">Medium</option>
+      <option value="2">High</option>
+    </select>
+  </label>
+  <label>
+    <span>Deadline:</span>
+    <input type="date" formControlName="deadline">
+  </label>
+  <label>
+    <span>Description:</span>
+    <textarea rows="4" type="text" formControlName="description"></textarea>
+  </label>
+
+  <div>
+    <button type="submit">submit</button>
+    <button type="reset">cancel</button>
+  </div>
+</form>

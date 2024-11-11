@@ -1,0 +1,16 @@
+<h2>Tasks</h2>
+
+<div>
+  @for (i of tasks; track $index) {
+    <app-task-card [task] = "i" (onRemove) = "RemoveTask($event)"></app-task-card>
+  }
+</div>
+
+<div>
+  <button (click)="Clear()">Clear</button>
+</div>
+
+<h2>Add Task</h2>
+<div>
+  <app-task-form (onCreate) = "CreateTask($event)"></app-task-form>
+</div>
