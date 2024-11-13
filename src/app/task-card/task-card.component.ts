@@ -16,17 +16,12 @@ export class TaskCardComponent {
   @Output()
   onRemove = new EventEmitter<number>();
 
-  ChangePriority() {
-    switch (this.task?.priority) {
-      case Priority.Low:
-        this.task.priority = Priority.Medium;
-        break;
-      case Priority.Medium:
-        this.task.priority = Priority.High;
-        break;
-      case Priority.High:
-        this.task.priority = Priority.Low;
-        break;
+  ChangeStatus() {
+    if (this.task?.completed) {
+      this.task.completed = false;
+    }
+    else if (this.task && !this.task.completed) {
+      this.task.completed = true;
     }
   }
 

@@ -1,5 +1,6 @@
 .card {
   display: inline-block;
+  height: 250px;
   width: 250px;
   background-color: yellow;
   color: black;
@@ -9,19 +10,14 @@
   transition: 0.3s;
 }
 
-.card.low-priority {
+.card.completed {
   background-color: green;
   color: white;
 }
 
-.card.medium-priority {
+.card.in-progress {
   background-color: yellow;
   color: black;
-}
-
-.card.high-priority {
-  background-color: red;
-  color: white;
 }
 
 .card:first-child {
